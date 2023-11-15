@@ -8,6 +8,6 @@
 
 #### Todo:
 - [ ] install nvim-cmp
-- [ ] install telescope
+- [x] install telescope
 - [ ] switch to a better colorscheme
 - [ ] document keybinds
