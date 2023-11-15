@@ -20,3 +20,6 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
+
+-- Open telescope
+vim.keymap.set("n", "<leader>t", ":Telescope<CR>", opts)
