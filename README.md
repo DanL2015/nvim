@@ -7,7 +7,7 @@
 - nvim-treesitter
 
 #### Todo:
-- [ ] install nvim-cmp
+- [x] install nvim-cmp
 - [x] install telescope
 - [ ] switch to a better colorscheme
 - [ ] document keybinds
