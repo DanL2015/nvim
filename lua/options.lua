@@ -1,5 +1,5 @@
 vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 vim.opt.mouse = 'a'
 
 vim.opt.tabstop = 2

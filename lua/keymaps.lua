@@ -1,6 +1,6 @@
 local opts = {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true
 }
 
 -- Leader key
@@ -23,3 +23,6 @@ vim.keymap.set("v", ">", ">gv", opts)
 
 -- Open telescope
 vim.keymap.set("n", "<leader>t", ":Telescope<CR>", opts)
+
+-- Format
+vim.keymap.set("n", "<leader>fm", ":lua vim.lsp.buf.format({ async = false})<CR>", opts)

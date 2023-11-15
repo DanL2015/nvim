@@ -5,9 +5,13 @@
 - mason, mason-lspconfig, lspconfig
 - nvim-tree
 - nvim-treesitter
+- nvim-cmp
+- nvim-telescope
+- nvim-lualine
 
 #### Todo:
 - [x] install nvim-cmp
 - [x] install telescope
+- [x] install lualine
 - [ ] switch to a better colorscheme
 - [ ] document keybinds
