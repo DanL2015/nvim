@@ -21,6 +21,14 @@ vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
 
+-- Splitting
+vim.keymap.set("n", "<leader>h", ":split<CR>:term<CR>:setlocal nonumber norelativenumber<CR>", opts)
+vim.keymap.set("n", "<leader>v", ":vsplit<CR>:term<CR>:setlocal nonumber norelativenumber<CR>", opts)
+vim.keymap.set("n", "<leader>sh", ":split<CR>", opts)
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
+
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
+
 -- Paste without yanking
 vim.keymap.set("x", "p", "P", opts)
 
