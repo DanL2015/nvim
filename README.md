@@ -11,10 +11,8 @@
 - dashboard-nvim
 - mini.pairs, mini.comment
 - prism
+- nvim-cokeline
 
 #### Todo:
-- [x] install nvim-cmp
-- [x] install telescope
-- [x] install lualine
-- [x] switch to a better colorscheme
+- [ ] actually customize stuff
 - [ ] document keybinds

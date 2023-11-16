@@ -12,11 +12,11 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 
--- Window resize with Ctrl + arrow keys
-vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", opts)
-vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", opts)
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+-- Window resize with Ctrl + Shift + {h, j, k, l}
+vim.keymap.set("n", "<C-S-k>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<C-S-j>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<C-S-h>", ":vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<C-S-l>", ":vertical resize +2<CR>", opts)
 
 vim.keymap.set("v", "<", "<gv", opts)
 vim.keymap.set("v", ">", ">gv", opts)
@@ -59,3 +59,15 @@ end
 
 -- Format
 vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format({ async = false }) end, opts)
+
+-- Don't show error message and warning symbols on left
+-- Shift the text every time you type
+vim.g.diagnostics_active = true
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = true,
+    signs = false,
+    underline = true,
+    update_in_insert = false,
+  }
+)
