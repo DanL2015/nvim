@@ -9,10 +9,12 @@
 - nvim-telescope
 - nvim-lualine
 - dashboard-nvim
+- mini.pairs, mini.comment
+- prism
 
 #### Todo:
 - [x] install nvim-cmp
 - [x] install telescope
 - [x] install lualine
-- [ ] switch to a better colorscheme
+- [x] switch to a better colorscheme
 - [ ] document keybinds
