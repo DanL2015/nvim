@@ -8,6 +8,7 @@
 - nvim-cmp
 - nvim-telescope
 - nvim-lualine
+- dashboard-nvim
 
 #### Todo:
 - [x] install nvim-cmp
