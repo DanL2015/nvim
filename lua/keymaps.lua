@@ -33,6 +33,9 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
 -- Paste without yanking
 vim.keymap.set("x", "p", "P", opts)
 
+-- Close buffer
+vim.keymap.set("n", "<C-c>", ":bd<CR>", opts)
+
 -- Open telescope
 vim.keymap.set("n", "<leader>t", ":Telescope<CR>", opts)
 
