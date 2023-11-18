@@ -27,8 +27,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-        ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+        ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<C-Space>"] = cmp.mapping.complete(),     -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(),            -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
