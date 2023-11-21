@@ -1,7 +1,0 @@
-Future snippets that I should add
-Latex
-- \rightarrow and \leftarrow
-- \[\]
-- \verb ||
-- Autocomplete of \begin{} and \end{}
-
