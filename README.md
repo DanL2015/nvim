@@ -2,10 +2,11 @@
 
 #### Installed Plugins
 - Colors: nightfox, mini-base16, github-nvim-theme
-- LSP: mason, mason-lspconfig, lspconfig
+- LSP: mason, mason-lspconfig, lspconfig, lsp-zero
 - Sidebar: nvim-tree
 - Tresitter: nvim-treesitter
 - Autocomplete: nvim-cmp
+- Snippets: luasnip
 - Fuzzy Finder: nvim-telescope
 - Statusline: nvim-lualine
 - Dashboard: dashboard-nvim
