@@ -24,17 +24,21 @@ return {
       {
         'L3MON4D3/LuaSnip',
         "hrsh7th/cmp-omni",
+        "hrsh7th/cmp-path",
+        "saadparwaiz1/cmp_luasnip",
       },
     },
     config = function()
-      -- Here is where you configure the autocompletion settings.
       local lsp_zero = require('lsp-zero')
       local luasnip = require("luasnip")
       lsp_zero.extend_cmp()
 
-      -- And you can configure cmp even more, if you want to.
       local cmp = require('cmp')
       local cmp_action = lsp_zero.cmp_action()
+
+      require('luasnip.loaders.from_vscode').lazy_load({
+        paths = '~/.config/nvim/snippets',
+      })
 
       cmp.setup({
         completion = {
@@ -58,7 +62,6 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- snippets
-          { name = "buffer" },  -- text within current buffer
           { name = "path" },    -- file system paths
         }),
         -- configure lspkind for vs-code like pictograms in completion menu
@@ -71,7 +74,6 @@ return {
           { name = "vimtex" },
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- snippets
-          { name = "buffer" },  -- text within current buffer
           { name = "path" },    -- file system paths
         }
       })
