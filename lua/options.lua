@@ -16,3 +16,5 @@ vim.opt.showmode = false
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.api.nvim_set_option('wrap', false)
