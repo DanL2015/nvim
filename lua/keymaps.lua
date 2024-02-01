@@ -24,11 +24,11 @@ vim.keymap.set("v", ">", ">gv", opts)
 -- Splitting
 vim.keymap.set("n", "<leader>h", ":split<CR>:term<CR>:setlocal nonumber norelativenumber<CR>", opts)
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>:term<CR>:setlocal nonumber norelativenumber<CR>", opts)
-vim.keymap.set("n", "<leader>sh", ":split<CR>", opts)
-vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
+vim.keymap.set("n", "<A-h>", ":split<CR>", opts)
+vim.keymap.set("n", "<A-v>", ":vsplit<CR>", opts)
 
 -- Comments
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
+vim.keymap.set("n", "<C-_>", ":CommentToggle<CR>", opts)
 
 -- Paste without yanking
 vim.keymap.set("x", "p", "P", opts)
@@ -38,6 +38,10 @@ vim.keymap.set("n", "<C-c>", ":bd<CR>", opts)
 
 -- Open telescope
 vim.keymap.set("n", "<leader>t", ":Telescope<CR>", opts)
+vim.keymap.set("n", "<leader>th", ":Telescope colorscheme<CR>", opts)
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+vim.keymap.set("n", "<leader>gf", ":Telescope git_files<CR>", opts)
+vim.keymap.set("n", "<leader>lb", ":Telescope buffers<CR>", opts)
 
 -- Tab Switching
 vim.api.nvim_set_keymap("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
@@ -63,8 +67,11 @@ end
 -- Format
 vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format({ async = false }) end, opts)
 
+-- Toggle tree
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+
 -- Don't show error message and warning symbols on left
--- Shift the text every time you type
+-- That shift the text every time you type
 vim.g.diagnostics_active = true
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

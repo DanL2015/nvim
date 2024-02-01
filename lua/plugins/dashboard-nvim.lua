@@ -45,4 +45,5 @@ return {
       },
     }
   end,
+  lazy = true,
 }

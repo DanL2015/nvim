@@ -1,53 +1,45 @@
 return {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = {
-        "nvim-tree/nvim-web-devicons"
-    },
-    config = function()
-        vim.g.loaded_netrw = 1
-        vim.g.loaded_netrwPlugin = 1
-        vim.opt.termguicolors = true
+  "nvim-tree/nvim-tree.lua",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons"
+  },
+  config = function()
+    vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+    vim.opt.termguicolors = true
 
-        local nvimtree = require("nvim-tree")
+    local nvimtree = require("nvim-tree")
 
-        nvimtree.setup({
-            view = {
-                width = 35,
-            },
-            renderer = {
-                indent_markers = {
-                    enable = true,
-                },
-                icons = {
-                    glyphs = {
-                        folder = {
-                            arrow_closed = "⏵",
-                            arrow_open = "⏷",
-                        },
-                        git = {
-                            unstaged = "",
-                            staged = "",
-                            unmerged = "",
-                            renamed = "➜",
-                            untracked = "",
-                            deleted = "",
-                            ignored = "",
-                        },
-                    },
-                },
-            },
-            actions = {
-                open_file = {
-                    window_picker = {
-                        enable = false,
-                    },
-                },
+    nvimtree.setup({
+      view = {
+        width = 35,
+      },
+      renderer = {
+        indent_markers = {
+          enable = true,
+        },
+        icons = {
+          glyphs = {
+            folder = {
+              arrow_closed = "⏵",
+              arrow_open = "⏷",
             },
             git = {
-                ignore = false,
-            },
-        })
-
-        vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-    end
+              untracked = "",
+            }
+          },
+        },
+      },
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = false,
+          },
+        },
+      },
+      git = {
+        ignore = false,
+      },
+    })
+  end
 }
