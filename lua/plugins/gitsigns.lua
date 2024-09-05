@@ -1,6 +1,6 @@
 return {
   "lewis6991/gitsigns.nvim",
-  event = { "BufRead" },
+  event = "User FilePost",
   lazy = true,
   config = function()
     require("gitsigns").setup({

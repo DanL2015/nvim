@@ -17,7 +17,7 @@ return {
             if buffer.diagnostics.warnings ~= 0 then
               return get_hex('DiagnosticWarn', 'fg')
             end
-            return vim.g.terminal_color_4
+            return get_hex("PmenuSel", "bg")
           end
           return "NONE"
         end,
@@ -54,9 +54,9 @@ return {
               return nil
             end
             if buffer.is_modified then
-              return vim.g.terminal_color_2
+              return get_hex("CmpItemMenu", "fg")
             end
-            return vim.g.terminal_color_1
+            return get_hex('DiagnosticError', 'fg')
           end,
           on_click = function(_, _, _, _, buffer)
             buffer:delete()
@@ -73,7 +73,7 @@ return {
             text = function(buf)
               return "Files"
             end,
-            fg = vim.g.terminal_color_4,
+            fg = get_hex("PmenuSel", "bg"),
             bg = get_hex("Normal", "bg"),
           }
         }

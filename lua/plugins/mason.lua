@@ -24,7 +24,26 @@ return {
     end
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    local servers = { "html", "tsserver", "emmet_ls", "clangd", "cssls", "rust_analyzer", "texlab", "marksman" }
+    local servers = {
+      -- lua stuff
+      "lua_ls",
+
+      -- web dev stuff
+      "cssls",
+      "html",
+      "emmet_ls",
+      "denols",
+
+      -- c/cpp stuff
+      "clangd",
+
+      -- custom
+      "rust_analyzer",
+      "texlab",
+      "ltex",
+      "marksman",
+      "pyright",
+    }
     for _, k in ipairs(servers) do
       lspconfig[k].setup {
         on_attach = on_attach,

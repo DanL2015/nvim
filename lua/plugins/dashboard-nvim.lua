@@ -4,7 +4,7 @@ return {
   event = 'VimEnter',
   config = function()
     require('dashboard').setup {
-      theme = 'hyper',
+      theme = 'doom',
       config = {
         header = {
     '',
@@ -21,7 +21,7 @@ return {
     '       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
     '',
         },
-        shortcut = {
+        center = {
           { desc = 'Update', group = 'Label', action = 'Lazy update', key = 'u' },
           {
             desc = 'Search',
@@ -42,6 +42,9 @@ return {
             key = 'c',
           },
         },
+        footer = {
+          "The one true text editor."
+        }
       },
     }
   end,

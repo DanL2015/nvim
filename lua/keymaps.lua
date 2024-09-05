@@ -70,6 +70,9 @@ vim.keymap.set("n", "<leader>fm", function() vim.lsp.buf.format({ async = false 
 -- Toggle tree
 vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 
+-- Nabla
+vim.keymap.set('n', '<leader>m', function() require("nabla").popup() end, opts)
+
 -- Don't show error message and warning symbols on left
 -- That shift the text every time you type
 vim.g.diagnostics_active = true
