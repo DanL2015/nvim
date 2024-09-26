@@ -19,7 +19,7 @@ return {
 
       -- enables contrast when using nvim tree.
       nvim_tree = {
-        contrast = true
+        contrast = false
       },
     })
 

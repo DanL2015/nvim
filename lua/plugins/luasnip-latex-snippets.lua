@@ -1,5 +1,5 @@
 return {
-  "iurimateus/luasnip-latex-snippets.nvim",
+  "DanL2015/luasnip-latex-snippets.nvim",
   requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
   ft = {"tex", "markdown"},
   lazy = true,

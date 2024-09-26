@@ -8,7 +8,7 @@ return {
   config = function()
     require("markview").setup {
       modes = { "n", "i", "no", "c" },
-      hybrid_modes = { "i" },
+      hybrid_modes = { "n", "i" },
 
       -- This is nice to have
       callbacks = {
