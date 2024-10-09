@@ -17,12 +17,16 @@ return {
         comments = true,
       },
 
+      palette_overrides = {
+        background = "#020203",
+      },
+
       -- enables contrast when using nvim tree.
       nvim_tree = {
         contrast = false
       },
     })
 
-    cmd.colorscheme "decay-dark"
+    cmd.colorscheme "decay-default"
   end
 }
